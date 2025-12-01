@@ -19,3 +19,26 @@ per controllare che la vostra logica sui prezzi funzioni correttamente, provate 
 */
 
 
+const userAge = parseInt(prompt('Inserisci la tua età per degli sconti'));
+console.log(userAge);
+
+const km = parseFloat(prompt('inserisci il numero di kilometri da percorrere in treno'))
+const priceKm = 0.21;
+let totalPrice = km * priceKm
+
+
+if (userAge < 18) {
+    console.log('utente è minorenne');
+    totalPrice = totalPrice * 0.8;
+
+} else if (userAge >=65) {
+    console.log('utente è senior');
+    totalPrice = totalPrice * 0.6;
+}
+
+
+const finalPrice = totalPrice.toFixed(2)
+
+
+//console.log("prezzo totale " + finalPrice)
+console.log(`prezzo totale ${finalPrice}`)
